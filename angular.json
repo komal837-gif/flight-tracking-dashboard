@@ -31,6 +31,7 @@
             ],
             "styles": [
               "node_modules/leaflet/dist/leaflet.css",
+              "bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ]
           },

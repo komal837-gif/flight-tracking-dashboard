@@ -1,57 +1,67 @@
-<header class="dashboard-header">
-  <div>
-    <h1>✈ Flight Tracking & Operations Dashboard</h1>
-    <p>Real-time flight monitoring and operational overview</p>
+
+ <div class="container-fluid dashboard-viewport">
+  
+ 
+  <header class="dashboard-topbar">
+    <div class="brand">
+      <span class="plane-icon">✈️</span>
+      <h1>SkyTrak <span class="badge-live">LIVE</span></h1>
+    </div>
+    <div class="subtitle">Aviation Operational Control Center</div>
+  </header>
+
+  <div class="dashboard-grid">
+   
+    <div class="left-panel">
+      
+      
+      <div class="kpi-grid">
+        <mat-card class="kpi-card total">
+          <mat-card-content>
+            <span class="label">Total</span>
+            <span class="value">{{ flightService.totalFlights() }}</span>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="kpi-card active">
+          <mat-card-content>
+            <span class="label">Active</span>
+            <span class="value">{{ flightService.activeFlights() }}</span>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="kpi-card delayed">
+          <mat-card-content>
+            <span class="label">Delayed</span>
+            <span class="value">{{ flightService.delayedFlights() }}</span>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="kpi-card arrived">
+          <mat-card-content>
+            <span class="label">Arrived</span>
+            <span class="value">{{ flightService.arrivedFlights() }}</span>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+    
+      <div class="filter-section-wrapper">
+        <app-filters></app-filters>
+      </div>
+
+    
+      <mat-card class="details-panel-wrapper">
+        <app-flight-details></app-flight-details>
+      </mat-card>
+
+    </div>
+
+    <div class="right-panel">
+      <div class="map-wrapper">
+        <app-flight-map></app-flight-map>
+      </div>
+    </div>
+
   </div>
-</header>
-
-<!-- KPI Cards -->
-<div class="kpi-container">
-
-  <mat-card class="kpi-card">
-    <mat-card-content>
-      <h2>{{ flightService.totalFlights() }}</h2>
-      <p>Total Flights</p>
-    </mat-card-content>
-  </mat-card>
-
-  <mat-card class="kpi-card">
-    <mat-card-content>
-      <h2>{{ flightService.activeFlights() }}</h2>
-      <p>Active Flights</p>
-    </mat-card-content>
-  </mat-card>
-
-  <mat-card class="kpi-card">
-    <mat-card-content>
-      <h2>{{ flightService.delayedFlights() }}</h2>
-      <p>Delayed Flights</p>
-    </mat-card-content>
-  </mat-card>
-
-  <mat-card class="kpi-card">
-    <mat-card-content>
-      <h2>{{ flightService.arrivedFlights() }}</h2>
-      <p>Arrived Flights</p>
-    </mat-card-content>
-  </mat-card>
-
-</div>
-
-<!-- Filters -->
-
-<app-filters></app-filters>
-
-<!-- Main Content -->
-
-<div class="content-section">
-
-  <div class="map-container">
-    <app-flight-map></app-flight-map>
-  </div>
-
-  <mat-card class="details-card">
-    <app-flight-details></app-flight-details>
-  </mat-card>
-
 </div>

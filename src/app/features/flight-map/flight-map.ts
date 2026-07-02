@@ -38,10 +38,7 @@ export class FlightMap implements AfterViewInit {
   }
 
 
-
-
-
-  private drawRoute(flight: Iflight): void {
+private drawRoute(flight: Iflight): void {
   if (this.routeLine) {
     this.map.removeLayer(this.routeLine);
   }
