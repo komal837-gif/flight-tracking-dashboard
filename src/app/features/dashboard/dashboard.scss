@@ -1,0 +1,96 @@
+.dashboard-header {
+  margin-bottom: 24px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.dashboard-header p {
+  margin-top: 8px;
+  color: #666;
+}
+
+/* KPI Cards */
+
+.kpi-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.kpi-container mat-card {
+  flex: 1;
+  min-width: 220px;
+}
+
+mat-card {
+  text-align: center;
+  border-radius: 12px;
+}
+
+mat-card h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+mat-card p {
+  margin-top: 8px;
+}
+
+/* Main Layout */
+
+.content-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+}
+
+.map-container {
+  width: 100%;
+}
+
+.details-card {
+  padding: 16px;
+  height: fit-content;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+  .content-section {
+    grid-template-columns: 1fr;
+  }
+
+  .kpi-container mat-card {
+    flex: 1 1 calc(50% - 16px);
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .dashboard-header h1 {
+    font-size: 24px;
+  }
+
+  .dashboard-header p {
+    font-size: 14px;
+  }
+
+  .kpi-container {
+    flex-direction: column;
+  }
+
+  .kpi-container mat-card {
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,57 @@
+<header class="dashboard-header">
+  <div>
+    <h1>✈ Flight Tracking & Operations Dashboard</h1>
+    <p>Real-time flight monitoring and operational overview</p>
+  </div>
+</header>
+
+<!-- KPI Cards -->
+<div class="kpi-container">
+
+  <mat-card class="kpi-card">
+    <mat-card-content>
+      <h2>{{ flightService.totalFlights() }}</h2>
+      <p>Total Flights</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="kpi-card">
+    <mat-card-content>
+      <h2>{{ flightService.activeFlights() }}</h2>
+      <p>Active Flights</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="kpi-card">
+    <mat-card-content>
+      <h2>{{ flightService.delayedFlights() }}</h2>
+      <p>Delayed Flights</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="kpi-card">
+    <mat-card-content>
+      <h2>{{ flightService.arrivedFlights() }}</h2>
+      <p>Arrived Flights</p>
+    </mat-card-content>
+  </mat-card>
+
+</div>
+
+<!-- Filters -->
+
+<app-filters></app-filters>
+
+<!-- Main Content -->
+
+<div class="content-section">
+
+  <div class="map-container">
+    <app-flight-map></app-flight-map>
+  </div>
+
+  <mat-card class="details-card">
+    <app-flight-details></app-flight-details>
+  </mat-card>
+
+</div>

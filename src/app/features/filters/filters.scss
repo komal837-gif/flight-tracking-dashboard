@@ -1,0 +1,36 @@
+.filters-container {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+mat-form-field {
+  flex: 1;
+  min-width: 220px;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+  mat-form-field {
+    flex: 1 1 calc(50% - 16px);
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .filters-container {
+    flex-direction: column;
+  }
+
+  mat-form-field {
+    width: 100%;
+    min-width: 100%;
+  }
+
+}

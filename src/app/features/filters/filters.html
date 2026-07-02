@@ -1,0 +1,84 @@
+<form
+  [formGroup]="filterForm"
+  class="filters-container">
+
+  <!-- Callsign Search -->
+  <mat-form-field appearance="outline">
+    <mat-label>Search Callsign</mat-label>
+
+    <input
+      matInput
+      formControlName="callsign"
+      placeholder="Enter callsign"
+    />
+  </mat-form-field>
+
+  <!-- Status Filter -->
+  <mat-form-field appearance="outline">
+    <mat-label>Status</mat-label>
+
+    <mat-select formControlName="status">
+
+      <mat-option value="">
+        All
+      </mat-option>
+
+      <mat-option value="Active">
+        Active
+      </mat-option>
+
+      <mat-option value="Delayed">
+        Delayed
+      </mat-option>
+
+      <mat-option value="Arrived">
+        Arrived
+      </mat-option>
+
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Origin Filter -->
+
+  <mat-form-field appearance="outline">
+    <mat-label>Origin</mat-label>
+
+    <mat-select formControlName="origin">
+
+      <mat-option value="">
+        All
+      </mat-option>
+
+      <mat-option value="Delhi">Delhi</mat-option>
+      <mat-option value="Mumbai">Mumbai</mat-option>
+      <mat-option value="Bangalore">Bangalore</mat-option>
+      <mat-option value="Chennai">Chennai</mat-option>
+      <mat-option value="Hyderabad">Hyderabad</mat-option>
+      <mat-option value="Kolkata">Kolkata</mat-option>
+
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Destination Filter -->
+
+  <mat-form-field appearance="outline">
+    <mat-label>Destination</mat-label>
+
+    <mat-select formControlName="destination">
+
+      <mat-option value="">
+        All
+      </mat-option>
+
+      <mat-option value="Delhi">Delhi</mat-option>
+      <mat-option value="Mumbai">Mumbai</mat-option>
+      <mat-option value="Bangalore">Bangalore</mat-option>
+      <mat-option value="Chennai">Chennai</mat-option>
+      <mat-option value="Hyderabad">Hyderabad</mat-option>
+      <mat-option value="Kolkata">Kolkata</mat-option>
+
+    </mat-select>
+  </mat-form-field>
+
+</form>
+

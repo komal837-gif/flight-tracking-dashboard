@@ -1,0 +1,39 @@
+<div class="details-card">
+
+  @if (flightService.selectedFlight(); as flight) {
+
+    <h2>Flight Details</h2>
+
+    <p><strong>Flight Number:</strong> {{ flight.flightNumber }}</p>
+
+    <p><strong>Callsign:</strong> {{ flight.callsign }}</p>
+
+    <p><strong>Aircraft Type:</strong> {{ flight.aircraftType }}</p>
+
+    <p><strong>Origin:</strong> {{ flight.origin }}</p>
+
+    <p><strong>Destination:</strong> {{ flight.destination }}</p>
+
+    <mat-chip>
+  {{ flight.status }}
+</mat-chip>
+   
+
+    <p>
+      <strong>Estimated Departure:</strong>
+      {{ flight.estimatedDepartureTime }}
+    </p>
+
+    <p>
+      <strong>Estimated Arrival:</strong>
+      {{ flight.estimatedArrivalTime }}
+    </p>
+
+  } @else {
+
+    <h3>Select a flight</h3>
+    <p>Click any marker on the map to view details.</p>
+
+  }
+
+</div>
