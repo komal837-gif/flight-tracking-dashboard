@@ -1,85 +1,108 @@
-Flight Tracking & Operations Dashboard
+# ✈️ Flight Tracking & Operations Dashboard
 
-Overview
+## Project Overview
 
-Flight Tracking & Operations Dashboard is a responsive web application built using Angular 20 and Leaflet Maps. The application allows aviation operations teams to monitor flights, visualize routes, view flight details, and track operational KPIs in a single dashboard.
+The Flight Tracking & Operations Dashboard is a web application developed using Angular 20. It provides a clean, responsive, and user-friendly interface for monitoring flight information. Users can search, filter, and view flight details while visualizing aircraft locations on an interactive map. The application follows a modular architecture with reusable components to ensure scalability and maintainability.
 
-Features
+---
 
-Interactive Flight Map using Leaflet 
+## Features
 
-15 Mock Flight Markers
+- Display real-time flight information
+- Search flights by flight number or airline
+- Filter flights based on flight status
+- Interactive flight location map using Leaflet
+- Responsive design for desktop and mobile devices
+- Angular Material based UI
+- Reusable standalone components
+- Clean and modular folder structure
 
-Flight Route Visualization
+---
 
-Flight Details Panel
+## Tech Stack
 
-KPI Dashboard
+- Angular 20
+- TypeScript
+- Angular Material
+- Leaflet
+- HTML5
+- CSS3
 
-Total Flights
-Active Flights
-Delayed Flights
-Arrived Flights
-Search by Callsign
+---
 
-Filter by Status
+## Project Structure
 
-Filter by Origin Airport
+```
+src/
+├── app/
+│   ├── core/
+│   ├── shared/
+│   ├── features/
+│   ├── services/
+│   ├── models/
+│   └── components/
+├── assets/
+└── environments/
+```
 
-Filter by Destination Airport
+---
 
-Responsive Dashboard Layout
+## Setup Instructions
 
-Angular Signals for State Management
+### Clone the Repository
 
-Tech Stack
-Angular 20
-TypeScript
-Angular Material
-Leaflet
-RxJS
-Reactive Forms
-SCSS
-Project Structure
-src/ ├── app/ │ ├── core/ │ │ ├── data/ │ │ ├── models/ │ │ └── services/ │ ├── features/ │ │ ├── dashboard/ │ │ ├── filters/ │ │ ├── flight-details/ │ │ └── flight-map/ │ └── shared/ │ └── material/
+```bash
+git clone <your-github-repository-link>
+```
 
-Installation
-Clone the repository:
+### Navigate to the Project Folder
 
-git clone
+```bash
+cd flight-tracking-dashboard
+```
 
-Install dependencies:
+### Install Dependencies
 
+```bash
 npm install
+```
 
-Run the application:
+### Run the Application
 
+```bash
 ng serve
+```
 
-Navigate to:
+Open your browser and visit:
 
+```
 http://localhost:4200
+```
 
-Build
-To generate a production build:
+---
 
-ng build
+## Design Decisions
 
-Build files will be available inside the dist folder.
+- Implemented using Angular 20 Standalone Components for a modern and modular architecture.
+- Used Angular Material to maintain a clean, responsive, and consistent user interface.
+- Integrated Leaflet to display aircraft locations on an interactive map.
+- Organized the application into reusable components and services for better maintainability.
+- Followed a scalable folder structure to simplify future development and feature expansion.
+- Designed the UI to provide an intuitive user experience with smooth navigation and responsive layouts.
 
-Architecture
-The application follows a component-based architecture.
+---
 
-Dashboard Component – Main dashboard layout
-Flight Map Component – Leaflet map integration and route visualization
-Filters Component – Search and filtering functionality
-Flight Details Component – Displays selected flight information
-Flight Service – Centralized state management using Angular Signals
-Future Enhancements
-Dark Mode
-Airport Markers
-Flight Playback Animation
-Weather Overlay Integration
-Backend API Integration
-Author
-Developed as part of the Frontend Developer (Angular & UI/UX) Technical Assessment.
+## Future Enhancements
+
+- Live flight data integration using external APIs.
+- Flight route visualization.
+- Authentication and user roles.
+- Real-time notifications for flight status changes.
+- Dark mode support.
+- Dashboard analytics and reporting.
+
+---
+
+## Author
+
+**Komal Satish Utage**
