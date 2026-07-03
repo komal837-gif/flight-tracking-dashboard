@@ -1,9 +1,12 @@
 Flight Tracking & Operations Dashboard
+
 Overview
+
 Flight Tracking & Operations Dashboard is a responsive web application built using Angular 20 and Leaflet Maps. The application allows aviation operations teams to monitor flights, visualize routes, view flight details, and track operational KPIs in a single dashboard.
 
 Features
-Interactive Flight Map using Leaflet
+
+Interactive Flight Map using Leaflet 
 
 15 Mock Flight Markers
 
